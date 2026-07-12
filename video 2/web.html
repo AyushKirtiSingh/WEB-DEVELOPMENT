@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FarmTrace - Farm To Society Vegetables</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins, sans-serif;background:#f6f9f6;color:#1f2937}
+
+header{
+position:sticky;
+top:0;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
+z-index:100;
+}
+
+.logo{font-weight:700;font-size:22px;color:#16a34a}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+font-weight:500;
+color:#374151;
+}
+
+.hero{
+padding:120px 8%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.hero h1{font-size:48px;margin-bottom:20px}
+.hero p{color:#4b5563;margin-bottom:30px}
+
+.btn{
+background:#16a34a;
+color:white;
+padding:14px 28px;
+border-radius:10px;
+border:none;
+font-weight:500;
+cursor:pointer;
+}
+
+.hero img{
+width:100%;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
+
+.section{padding:90px 8%}
+
+.section-title{text-align:center;margin-bottom:60px}
+.section-title h2{font-size:34px}
+.section-title p{color:#6b7280}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+transition:0.3s
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(0,0,0,0.1)
+}
+
+.farm-gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px
+}
+
+.farm-gallery img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:15px;
+transition:0.4s
+}
+
+.farm-gallery img:hover{
+transform:scale(1.05)
+}
+
+.qr-demo{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:20px
+}
+
+.qr-box{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08)
+}
+
+.info-box{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+display:none;
+max-width:400px;
+text-align:center
+}
+
+.dashboard{
+background:#111827;
+color:white;
+padding:40px;
+border-radius:20px;
+}
+
+.dashboard-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:20px
+}
+
+.stat{
+background:#1f2937;
+padding:20px;
+border-radius:12px
+}
+
+.stat h3{font-size:28px;color:#4ade80}
+
+.cart-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px
+}
+
+.cart{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.06)
+}
+
+footer{
+margin-top:80px;
+background:white;
+padding:40px;
+text-align:center
+}
+
+@media(max-width:900px){
+.hero{grid-template-columns:1fr}
+.hero h1{font-size:36px}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">FarmTrace</div>
+<nav>
+<a href="#how">How it works</a>
+<a href="#farms">Our Farms</a>
+<a href="#trace">Traceability</a>
+<a href="#carts">Carts</a>
+<a href="#dashboard">Dashboard</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h1>Know Your Vegetables</h1>
+<p>FarmTrace connects farmers directly to your residential society. Every vegetable pack has a QR code showing where it was grown, when it was harvested, and who grew it.</p>
+<button class="btn" onclick="scrollToSection('trace')">Scan Demo QR</button>
+</div>
+
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+</section>
+
+<section id="how" class="section">
+<div class="section-title">
+<h2>How It Works</h2>
+<p>A transparent supply chain from farm to society</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<h3>🌱 Farm Sourcing</h3>
+<p>We partner with verified farmers and procure vegetables directly from farms every morning.</p>
+</div>
+
+<div class="card">
+<h3>📦 Hygienic Packaging</h3>
+<p>Vegetables are sorted, cleaned and packaged with QR traceability labels.</p>
+</div>
+
+<div class="card">
+<h3>📱 QR Transparency</h3>
+<p>Scan the QR code to see farm origin, farmer name, harvest date and logistics journey.</p>
+</div>
+
+<div class="card">
+<h3>🛒 Society Carts</h3>
+<p>Our mobile carts sell packaged vegetables conveniently outside residential societies.</p>
+</div>
+</div>
+</section>
+
+<section id="farms" class="section">
+<div class="section-title">
+<h2>Meet Our Farms</h2>
+<p>We work with trusted farmers across regions</p>
+</div>
+
+<div class="farm-gallery">
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
+<img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf">
+<img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
+<img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30">
+</div>
+</section>
+
+<section id="trace" class="section">
+<div class="section-title">
+<h2>QR Traceability</h2>
+<p>Every vegetable pack contains a QR code that reveals its origin</p>
+</div>
+
+<div class="qr-demo">
+
+<div class="qr-box">
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=farmtrace-demo">
+</div>
+
+<button class="btn" onclick="scanQR()">Simulate Scan</button>
+
+<div id="farmInfo" class="info-box">
+<h3>Tomatoes</h3>
+<p><b>Farmer:</b> Ramesh Patel</p>
+<p><b>Farm:</b> Nashik Organic Farm</p>
+<p><b>Harvest Date:</b> 1 Day Ago</p>
+<p><b>Packed At:</b> FarmTrace Packaging Hub</p>
+<p><b>Distance Travelled:</b> 148 km</p>
+</div>
+
+</div>
+</section>
+
+<section id="carts" class="section">
+<div class="section-title">
+<h2>Find Our Society Carts</h2>
+<p>Fresh vegetables delivered daily near your home</p>
+</div>
+
+<div class="cart-list">
+
+<div class="cart">
+<h3>Green Valley Society</h3>
+<p>Morning: 7AM - 10AM</p>
+<p>Evening: 5PM - 8PM</p>
+</div>
+
+<div class="cart">
+<h3>Sunrise Residency</h3>
+<p>Morning: 8AM - 11AM</p>
+<p>Evening: 6PM - 9PM</p>
+</div>
+
+<div class="cart">
+<h3>Lakeview Apartments</h3>
+<p>Morning: 7AM - 10AM</p>
+<p>Evening: 5PM - 8PM</p>
+</div>
+
+</div>
+</section>
+
+<section id="dashboard" class="section">
+
+<div class="section-title">
+<h2>Operations Dashboard</h2>
+<p>Live operational overview</p>
+</div>
+
+<div class="dashboard">
+
+<h2>FarmTrace Admin</h2>
+
+<div class="dashboard-grid">
+
+<div class="stat">
+<p>Total Farmers</p>
+<h3 id="farmers">28</h3>
+</div>
+
+<div class="stat">
+<p>Vegetables Packaged Today</p>
+<h3 id="packs">1240</h3>
+</div>
+
+<div class="stat">
+<p>Active Carts</p>
+<h3 id="cartsStat">16</h3>
+</div>
+
+<div class="stat">
+<p>QR Scans Today</p>
+<h3 id="scans">356</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 FarmTrace • Transparent Farm To Society Supply Chain</p>
+</footer>
+
+<script>
+
+function scanQR(){
+const box=document.getElementById('farmInfo')
+box.style.display='block'
+}
+
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({behavior:'smooth'})
+}
+
+// simple dashboard animation
+setInterval(()=>{
+let scans=document.getElementById('scans')
+scans.innerText=parseInt(scans.innerText)+Math.floor(Math.random()*3)
+},3000)
+
+</script>
+
+</body>
+</html>
