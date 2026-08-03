@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXCERCISE 4</title>
+    <style>
+        :root {
+            --color: rgb(72, 21, 117);
+            --seccolor: rgba(223, 152, 152, 0.623);
+            --defop: 0.9;
+            --defpad: 8px;
+            --defmargin: 15px;
+            --text-color: rgb(241, 235, 235);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: var(--seccolor);
+        }
+
+        ul {
+            display: flex;
+            background-color: var(--color);
+            height: 80px;
+            text-align: center;
+
+        }
+
+        ul li {
+            list-style: none;
+            padding: var(--defpad);
+            margin: var(--defmargin);
+            /* background-color: var(--color); */
+            width: 1000px;
+            text-align: center;
+            font-size: larger;
+            font-style: italic;
+            opacity: var(--defop);
+            font-weight: 890;
+            color: var(--text-color);
+
+        }
+
+        ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav1">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact</a></li>
+            <li><a href="/">Achievements</a></li>
+            <li><a href="/">Hobbies</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Files</a></li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>
