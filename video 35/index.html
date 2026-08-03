@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        .box:first-child {
+            background-color: rgb(160, 189, 104);
+        }
+
+        .box::first-line {
+            color: rgb(109, 109, 8);
+        }
+
+        .boxes *{
+            color: blueviolet;
+            border: 2px solid black;
+        }
+
+        p, a, .box, [data-color="primary"]{
+            padding-top: 45px;
+        }
+
+        .boxes :nth-child(odd){
+            background-color: slateblue;
+        }
+
+        .box:nth-last-child(1){
+            background-color: brown;
+        }
+
+        .boxes::before{
+            content: "Harry is good"; 
+            color: rgb(3, 0, 6);
+        }
+
+        .boxes::after{
+            content: "Sigma web dev course is also good";
+            color: tomato; 
+        }
+
+        ::selection{
+            color: aqua;
+            background-color: black;
+        }
+
+        .box::first-letter{
+            color: peru;
+            font-size: 50px;
+        }
+        
+        input::placeholder{
+            background-color: aquamarine;
+            color: rgb(67, 43, 7);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color= "primary" class="box">Hey I am a box</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quis architecto atque, reprehenderit a voluptatem odio nihil error, ratione minus explicabo commodi inventore molestias totam similique, quidem quos cum laudantium delectus ipsum eligendi! Quaerat nemo dolorum tempora corrupti voluptas repudiandae repellendus minima provident molestiae aliquid, atque dolor deserunt at saepe hic quis vitae temporibus explicabo! Natus fuga animi iure repellat recusandae officiis voluptatibus tempora, et ducimus placeat facilis quae minima, repellendus molestias, consequuntur hic dolore? Sequi quo tempore et necessitatibus odio, placeat alias rem sapiente cum animi atque non magnam veritatis, quia natus libero, omnis praesentium labore? Nulla, quidem quibusdam!</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <input type="text" placeholder="Type your name here">
+    </div>
+</body>
+</html>
