@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACTORIAL CALCULATOR</title>
+</head>
+<body>
+    <script>
+        let n = prompt("Enter the number")
+        if(n==0){
+            alert("The factorial of "+ n + " is " + 1)
+        }
+        let product = 1;
+
+        for (let index = n; index > 0; index--) {
+            product *= index
+        }
+
+        alert("The factorial of "+ n + " is " + product)
+    </script>
+</body>
+</html>
